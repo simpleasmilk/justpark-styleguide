@@ -14,7 +14,7 @@
   @include appearance(none);
   @include transition(all 0.2s ease-in-out);
   @include button-size(10px, 20px, $base-font-size, 1);
-  @include button-variant($base-font-color, $color-light-gray);
+  @include button-variant($base-font-color, $color-gray);
 }
 
 // Button Styles
