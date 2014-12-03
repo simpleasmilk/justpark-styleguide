@@ -41,6 +41,10 @@
 .btn--hard {
   border-radius: 0;
 }
+.btn--natural {
+  vertical-align: baseline;
+  @include button-size(0, $btn-padding-horizontal*0.3, inherit, inherit);
+}
 
 // Button Sizes
 .btn--small {
