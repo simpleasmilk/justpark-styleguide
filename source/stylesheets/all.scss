@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@import 'normalize';
+
+@import 'bourbon';
+@import 'base/grid-settings';
+@import 'neat';
+@import 'base/base';
+
+
+@import 'modules/buttons';
+
+
+.container {
+  max-width: 80%;
+  margin: 20px auto;
+}

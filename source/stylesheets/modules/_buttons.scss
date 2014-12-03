@@ -1,0 +1,57 @@
+.btn {
+  -webkit-font-smoothing: antialiased;
+  border-radius: $base-border-radius;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  @include appearance(none);
+  @include transition(all 0.2s ease-in-out);
+  @include button-size(10px, 20px, $base-font-size, 1);
+  @include button-variant($base-font-color, $color-light-gray);
+}
+
+// Button Styles
+.btn--primary {
+  @include button-variant(white, $color-primary);
+}
+
+.btn--secondary {
+  @include button-variant(white, $color-secondary);
+}
+
+.btn--negative {
+  @include button-variant(white, $color-red);
+}
+
+.btn--full {
+  display: block;
+  width: 100%;
+}
+
+.btn--soft {
+  border-radius: 80px;
+}
+.btn--hard {
+  border-radius: 0;
+}
+
+// Button Sizes
+.btn--small {
+  @include button-size(5px, 10px, $base-font-size, 1);
+}
+.btn--medium {
+  @include button-size(10px, 20px, $base-font-size, 1);
+}
+.btn--large {
+  @include button-size(15px, 30px, $base-font-size, 1);
+}
+.btn--huge {
+  @include button-size(20px, 40px, $base-font-size, 1);
+}
