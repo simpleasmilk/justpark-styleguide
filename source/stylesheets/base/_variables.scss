@@ -9,15 +9,15 @@ $base-font-size: 1em;
 $base-line-height: $base-font-size * 1.5;
 $unitless-line-height: $base-line-height / ($base-line-height * 0 + 1); // Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
 $header-line-height: $base-font-size * 1.25;
-$base-border-radius: em(4);
+$base-border-radius: 4px;
 
 // Colors
-$color-primary: #00b500;
-$color-secondary: #ffad00;
+$color-green: #00b500;
+$color-red: #ff2e2e;
+$color-yellow: #ffad00;
 $color-gray: #e5e5e5;
 $color-dark-gray: #1a222a;
 $color-light-gray: #fafafa;
-$color-red: #ff2e2e;
 
 $blue: #477DCA;
 $dark-gray: #333;
@@ -26,6 +26,11 @@ $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
+
+// Colour names
+$color-primary: $color-green;
+$color-secondary: $color-yellow;
+
 
 // Background Color
 $base-background-color: white;
@@ -38,12 +43,12 @@ $base-accent-color: $blue;
 $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-accent-color, 15);
 
-// Buttons
-$base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
-
 // Border color
 $base-border-color: $light-gray;
+
+// Buttons
+$btn-padding-vertical: 10px;
+$btn-padding-horizontal: $btn-padding-vertical*2;
 
 // Flash Colors
 $alert-color: $light-yellow;
