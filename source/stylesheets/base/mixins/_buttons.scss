@@ -11,9 +11,12 @@
     color: $color;
     background-color: darken($background, 10%);
   }
-  &:active {
+  &:focus,
+  &:active,
+  &.btn--active {
     color: $color;
     background-color: darken($background, 15%);
+    outline: 0;
   }
   &.btn--disabled,
   &[disabled],
@@ -23,7 +26,7 @@
     &:focus,
     &.focus,
     &:active,
-    &.active {
+    &.btn--active {
       background-color: $color-gray;
       color: white;
       cursor: not-allowed;
