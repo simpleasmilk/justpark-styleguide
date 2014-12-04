@@ -40,9 +40,9 @@
   font-size: $font-size;
   line-height: $line-height;
   .btn__icon--left {
-    margin-right: $padding-horizontal;
+    margin-right: $padding-horizontal*0.5;
   }
   .btn__icon--right {
-    margin-left: $padding-horizontal;
+    margin-left: $padding-horizontal*0.5;
   }
 }
