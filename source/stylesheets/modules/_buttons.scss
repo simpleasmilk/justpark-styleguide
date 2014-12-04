@@ -64,3 +64,12 @@
 .btn--beta {
   @include button-size($btn-padding-vertical*1.5, $btn-padding-horizontal*1.5, $base-font-size*1.5, 1);
 }
+
+// Buttons with icons
+.btn.icon {
+  &:before, &:after {
+    vertical-align: middle;
+  }
+}
+
+
