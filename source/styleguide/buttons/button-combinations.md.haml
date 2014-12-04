@@ -1,0 +1,67 @@
+%table
+  %thead
+    %tr
+      %th{colspan: '3'}
+        %h3 Button combinations
+        %p A small selection of using the various button classes together.
+  %tbody
+    %tr
+      %td
+        %button.btn.btn--primary.btn--large
+          %i.btn__icon.btn__icon--left.icon--navigateleft{"aria-hidden" => "true"}
+          Hello
+      %td Large primary button with left icon
+      %td 
+        %p .btn.btn--primary.btn--large 
+        %p .btn__icon.btn__icon--left.icon--navigateright
+
+    %tr
+      %td
+        %button.btn.btn--negative.btn--huge
+          Hello
+          %i.btn__icon.btn__icon--right.icon--delete{"aria-hidden" => "true"}
+      %td Huge primary button with right icon
+      %td 
+        %p .btn.btn--primary.btn--huge 
+        %p .btn__icon.btn__icon--right.icon--delete
+
+    %tr
+      %td
+        %button.btn.btn--soft
+          Hello
+          %i.btn__icon.btn__icon--right.icon--refresh{"aria-hidden" => "true"}
+      %td Rounded button with right icon
+      %td 
+        %p .btn.btn--soft
+        %p .btn__icon.btn__icon--right.icon--refresh
+
+    %tr
+      %td
+        %button.btn.btn--secondary.btn--beta
+          %i.btn__icon.btn__icon--left.icon--alert{"aria-hidden" => "true"}
+          Hello
+      %td Large text secondary button with left icon
+      %td 
+        %p .btn.btn--secondary.btn--beta
+        %p .btn__icon.btn__icon--left.icon--alert
+
+    %tr
+      %td
+        %button.btn.btn--negative
+          %i.btn__icon.icon--delete{"aria-hidden" => "true"}
+      %td Negative icon button
+      %td 
+        %p .btn.btn--negative
+        %p .btn__icon.icon--delete
+
+    %tr
+      %td
+        Lorem ipsum
+        %button.btn.btn--primary.btn--natural
+          Download
+          %i.btn__icon.btn__icon--right.icon--download{"aria-hidden" => "true"}
+        id est laborum.
+      %td Primary button within parent element with right icon
+      %td
+        %p .btn.btn--primary.btn--natural
+        %p .btn__icon.btn__icon--right.icon--download
