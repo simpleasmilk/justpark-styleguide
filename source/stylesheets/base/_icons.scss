@@ -24,7 +24,7 @@
 /* This triggers a redraw in IE to Fix IE8's :before content rendering. */
 html:hover .icon{-ms-zoom: 1;}
 
-.icon {
+.icon, %icon {
   font-family: "SSStandard";
   font-style: normal;
   font-weight: normal;

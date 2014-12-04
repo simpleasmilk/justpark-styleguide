@@ -67,6 +67,7 @@
 
 // Button icons
 .btn__icon {
+  @extend %icon;
   vertical-align: middle;
 }
 
