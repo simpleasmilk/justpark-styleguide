@@ -51,10 +51,10 @@
   @include button-size($btn-padding-vertical*0.5, $btn-padding-horizontal*0.5, $base-font-size, 1);
 }
 .btn--large {
-  @include button-size($btn-padding-vertical*1.5, $btn-padding-horizontal*1.5, $base-font-size, 1);
+  @include button-size($btn-padding-vertical*1.5, $btn-padding-horizontal*1.2, $base-font-size, 1);
 }
 .btn--huge {
-  @include button-size($btn-padding-vertical*2, $btn-padding-horizontal*2, $base-font-size, 1);
+  @include button-size($btn-padding-vertical*2, $btn-padding-horizontal*1.4, $base-font-size, 1);
 }
 
 // Buttons with text increases
@@ -65,11 +65,9 @@
   @include button-size($btn-padding-vertical*1.5, $btn-padding-horizontal*1.5, $base-font-size*1.5, 1);
 }
 
-// Buttons with icons
-.btn.icon {
-  &:before, &:after {
-    vertical-align: middle;
-  }
+// Button icons
+.btn__icon {
+  vertical-align: middle;
 }
 
 

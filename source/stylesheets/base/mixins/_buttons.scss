@@ -13,12 +13,12 @@
   }
   &:focus,
   &:active,
-  &.btn--active {
+  &.active {
     color: $color;
     background-color: darken($background, 15%);
     outline: 0;
   }
-  &.btn--disabled,
+  &.disabled,
   &[disabled],
   fieldset[disabled] & {
     &,
@@ -39,19 +39,10 @@
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   line-height: $line-height;
-  &.icon {
-    // Sets height and width padding to the same to allow for square buttons when icons are used on their own.
-    padding: $padding-vertical $padding-vertical;
-  }
-  &.icon.icon--left,
-  &.icon.icon--right {
-    // Resets padding from the above .icon for icons with text
-    padding: $padding-vertical $padding-horizontal;
-  }
-  &.icon.icon--left:before {
+  .btn__icon--left {
     margin-right: $padding-horizontal;
   }
-  &.icon.icon--right:after {
+  .btn__icon--right {
     margin-left: $padding-horizontal;
   }
 }
