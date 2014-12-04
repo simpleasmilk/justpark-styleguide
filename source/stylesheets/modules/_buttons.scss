@@ -34,7 +34,9 @@
   display: block;
   width: 100%;
 }
-
+.btn--empty {
+  background-color: transparent;
+}
 .btn--soft {
   border-radius: 80px;
 }
