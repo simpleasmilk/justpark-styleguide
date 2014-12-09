@@ -120,16 +120,30 @@
 // Button Sizes
 // --------------------------------------------------
 
-.btn-lg {
-  // line-height: ensure even-numbered height of button next to large input
-  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
-}
-.btn-sm {
+.btn-sm, .btn--small {
   // line-height: ensure proper height of button next to small input
-  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+  .button-size(@btn-padding-vertical*0.5; @btn-padding-horizontal*0.5; @font-size-base; @line-height-base; @border-radius-base);
 }
-.btn-xs {
-  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+.btn--medium{
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@btn-padding-vertical; @btn-padding-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+}
+.btn-lg, .btn--large{
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@btn-padding-vertical*1.5; @btn-padding-horizontal*1.2; @font-size-base; @line-height-base; @border-radius-base);
+}
+.btn--huge{
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@btn-padding-vertical*2; @btn-padding-horizontal*1.4; @font-size-base; @line-height-base; @border-radius-base);
+}
+
+.btn--alpha{
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@btn-padding-vertical*1.5; @btn-padding-horizontal*1.2; @font-size-large*1.5; @line-height-large; @border-radius-large);
+}
+.btn--beta{
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@btn-padding-vertical; @btn-padding-horizontal; @font-size-large; @line-height-large; @border-radius-large);
 }
 
 
