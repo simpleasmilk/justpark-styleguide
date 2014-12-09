@@ -1,0 +1,26 @@
+%table.table
+  %thead
+    %tr
+      %th{colspan: '3'}
+        %h3 Inputs
+  %tbody
+    %tr
+      %td
+        %input.form-control{placeholder: "I'm an input", type: "text"}
+      %td Input
+      %td .form-control
+
+    %tr
+      %td
+        %input.form-control{placeholder: "I'm an input", type: "text", disabled: "disabled"}
+      %td Disabled input
+      %td 
+
+    %tr
+      %td
+        .input-with-icon
+          %input.form-control{placeholder: "I'm an input", type: "text"}
+          .input-icon
+            %span.icon.icon--settings
+      %td Input with icon
+      %td .input-with-icon
