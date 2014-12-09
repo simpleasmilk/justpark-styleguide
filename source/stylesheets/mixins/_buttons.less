@@ -7,15 +7,16 @@
   color: @color;
   background-color: @background;
 
-  &:hover,
+  &:hover {
+    color: @color;
+    background-color: darken(@background, 5%);
+  }
   &:focus,
   &.focus,
-  &:active,
   &.active,
   .open > .dropdown-toggle& {
     color: @color;
-    background-color: darken(@background, 10%);
-        border-color: darken(@border, 12%);
+    background-color: darken(@background, 8%);
   }
   &:active,
   &.active,
