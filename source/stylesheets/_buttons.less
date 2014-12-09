@@ -57,27 +57,27 @@
 // Alternate buttons
 // --------------------------------------------------
 
-.btn-default {
+.btn-default, .btn {
   .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
 }
-.btn-primary {
+.btn-primary, .btn--primary {
   .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
 }
 // Success appears as green
-.btn-success {
+.btn-success, .btn--secondary {
   .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
 }
-// Info appears as blue-green
-.btn-info {
-  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
-}
-// Warning appears as orange
-.btn-warning {
-  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
-}
 // Danger and error appear as red
-.btn-danger {
+.btn-danger, .btn--negative {
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+.btn--empty {
+  border: 0;
+  background: transparent;
+}
+.btn--full {
+  display: block;
+  width: 100%;
 }
 
 
