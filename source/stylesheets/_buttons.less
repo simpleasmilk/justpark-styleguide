@@ -140,24 +140,24 @@
 
 .btn--alpha{
   // line-height: ensure even-numbered height of button next to large input
-  .button-size(@btn-padding-vertical*1.5; @btn-padding-horizontal*1.2; @font-size-large*1.5; @line-height-large; @border-radius-large);
+  .button-size(@btn-padding-vertical*1.5; @btn-padding-horizontal*1.2; @font-size-large*1.5; @line-height-large; @border-radius-base);
 }
 .btn--beta{
   // line-height: ensure even-numbered height of button next to large input
-  .button-size(@btn-padding-vertical; @btn-padding-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+  .button-size(@btn-padding-vertical; @btn-padding-horizontal; @font-size-large; @line-height-large; @border-radius-base);
 }
 
 
 // Block button
 // --------------------------------------------------
 
-.btn-block {
+.btn-block, .btn--block {
   display: block;
   width: 100%;
 }
 
 // Vertically space out multiple block buttons
-.btn-block + .btn-block {
+.btn-block, .btn--block + .btn-block, .btn--block {
   margin-top: 5px;
 }
 
@@ -165,7 +165,14 @@
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  &.btn-block {
+  &.btn-block, .btn--block {
     width: 100%;
   }
+}
+
+// Button Icons
+// --------------------------------------------------
+.btn__icon {
+  &:extend(.icon);
+  vertical-align: middle;
 }
