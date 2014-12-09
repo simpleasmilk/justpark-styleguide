@@ -1,7 +1,7 @@
-require 'guard/guard'
+require 'guard/plugin'
 
 module ::Guard
-  class LessWatcher < ::Guard::Guard
+  class LessWatcher < ::Guard::Plugin
 
     def start
       run_on_changes([])
