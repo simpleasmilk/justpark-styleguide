@@ -17,3 +17,4 @@ gem 'less'
 gem 'therubyracer'
 
 gem "middleman-deploy"
+gem 'guard'
