@@ -29,11 +29,11 @@
   margin-bottom: @line-height-computed;
   background-color: @progress-bg;
   border-radius: @progress-border-radius;
-  .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
 }
 
 // Bar of progress
-.progress-bar {
+.progress-bar,
+.progress__bar {
   float: left;
   width: 0%;
   height: 100%;
@@ -42,8 +42,11 @@
   color: @progress-bar-color;
   text-align: center;
   background-color: @progress-bar-bg;
-  .box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
   .transition(width .6s ease);
+  border-left: 3px solid darken(@brand-primary, 10%);
+  &:first-child {
+    border-left: 0;
+  }
 }
 
 // Striped bars
