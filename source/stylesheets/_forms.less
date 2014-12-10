@@ -358,21 +358,12 @@ input[type="checkbox"] {
 // The `.form-group-* form-control` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-.input-sm {
+.input-sm, .form-control--small {
   .input-size(@input-height-small; @input-padding-small-vertical; @input-padding-small-horizontal; @font-size-small; @line-height-small; @input-border-radius-small);
-}
-.form-group-sm {
-  .form-control {
-    .input-size(@input-height-small; @input-padding-small-vertical; @input-padding-small-horizontal; @font-size-small; @line-height-small; @input-border-radius-small);
-  }
 }
 
 .input-lg, .form-control--large {
-  .input-size(@input-height-base; @input-padding-large-vertical; @input-padding-large-horizontal; @font-size-base; @line-height-base; @border-radius-base);
-}
-
-.input-lg, .form-control--alpha {
-  .input-size(@input-height-large; @input-padding-large-vertical; @input-padding-large-horizontal; @font-size-large; @line-height-large; @input-border-radius-large);
+  .input-size(@input-height-large; @input-padding-large-vertical; @input-padding-large-horizontal; @font-size-base; @line-height-base; @border-radius-base);
 }
 
 
