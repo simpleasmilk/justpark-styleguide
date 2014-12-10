@@ -1,0 +1,29 @@
+%table.table
+  %thead
+    %tr
+      %th{colspan: '3'}
+        %h3 Input styles
+  %tbody
+    %tr
+      %td
+        %input.form-control{placeholder: "I'm an input", type: "text"}
+      %td Input
+      %td .form-control
+
+    %tr
+      %td
+        %input.form-control.form-control--success{placeholder: "I'm an input", type: "text"}
+      %td Input Success
+      %td .form-control.form-control--success
+
+    %tr
+      %td
+        %input.form-control.form-control--error{placeholder: "I'm an input", type: "text"}
+      %td Input Error
+      %td .form-control.form-control--error
+
+    %tr
+      %td
+        %input.form-control{placeholder: "I'm an input", type: "text", disabled: "disabled"}
+      %td Disabled input
+      %td 

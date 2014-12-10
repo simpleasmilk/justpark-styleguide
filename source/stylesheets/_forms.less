@@ -149,6 +149,13 @@ output {
   textarea& {
     height: auto;
   }
+
+  &.form-control--success {
+    border-color: @brand-primary;
+  }
+  &.form-control--error {
+    border-color: @brand-danger;
+  }
 }
 
 .input-with-icon {
@@ -172,9 +179,21 @@ output {
   .form-control {
     padding-left: @padding-base-horizontal*2.5;
   }
+
   .form-control:focus + .input-icon {
     color: @gray-dark;
     .transition(~"color: ease-in-out .15s");
+  }
+  .form-control--success + .input-icon,
+  .form-control--success:focus + .input-icon {
+    color: @brand-primary;
+  }
+  .form-control--error + .input-icon,
+  .form-control--error:focus + .input-icon {
+    color: @brand-danger;
+  }
+  .form-control[disabled] + .input-icon {
+    color: #fff;
   }
 }
 
