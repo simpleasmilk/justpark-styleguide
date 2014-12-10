@@ -13,6 +13,10 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
+# Add better markdown and XML support
+gem "redcarpet"
+gem "builder"
+
 gem 'less'
 gem 'therubyracer'
 
