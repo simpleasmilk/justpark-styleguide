@@ -6,6 +6,22 @@
   %tbody
     %tr
       %td
-        %input.form-control{placeholder: "I'm an input", type: "number", min: "5", step: "5"}
-      %td Input
-      %td .form-control
+        %input.form-control.form-control--stepper{placeholder: "I'm an input", type: "number", min: "5", step: "5"}
+      %td Number stepper
+      %td .form-control.form-control--stepper
+
+    %tr
+      %td
+        .input-with-icon
+          %input.form-control.form-control--stepper{placeholder: "I'm an input", type: "number", min: "5", step: "5"}
+          .input-icon
+            %span.icon.icon--settings
+      %td Validated number stepper
+      %td ISSUE: can't use css to change colour of icon or validate/eror icon due to javascript div wrapping of stepper, will need custom javascript solution.
+
+
+    %tr
+      %td
+        %input.form-control.form-control--stepper{placeholder: "I'm an input", type: "number", min: "5", step: "5", disabled: "disabled"}
+      %td Disabled number stepper
+      %td .form-control.form-control--stepper[disabled]
