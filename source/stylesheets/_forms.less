@@ -616,25 +616,66 @@ input[type="checkbox"] {
  * Copyright 2014 Ben Plum; MIT Licensed 
  */ 
 
-  .stepper { 
-    overflow: hidden; 
-    position: relative; 
-  }
-  .stepper .stepper-input { 
-    width: 100%; 
-    z-index: 49;
-    -moz-appearance: textfield;
-  }
-
-  .stepper .stepper-input::-webkit-inner-spin-button,
-  .stepper .stepper-input::-webkit-outer-spin-button { 
+.stepper { 
+  overflow: hidden; 
+  position: relative; 
+}
+.stepper .stepper-input { 
+  width: 100%; 
+  z-index: 49;
+  -moz-appearance: textfield;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
     margin: 0; 
   }
 
-  .stepper .stepper-arrow { background: #eee url(jquery.fs.stepper-arrows.png) no-repeat; border: 1px solid #ccc; cursor: pointer; display: block; height: 50%; position: absolute; right: 0; text-indent: -99999px; width: 20px; z-index: 50; }
-  .stepper .stepper-arrow.up { background-position: center top; border-bottom: none; top: 0; }
-  .stepper .stepper-arrow.down { background-position: center bottom; bottom: 0; }
+  &:focus {
+    + .stepper-arrow.up:after {
+      border-bottom-color: @gray-dark;
+    }
+    + .stepper-arrow + .stepper-arrow.down:after {
+      border-top-color: @gray-dark;
+    }
+  }
+}
 
-  .stepper.disabled .stepper-input { background: #fff; border-color: #eee; color: #ccc; }
-  .stepper.disabled .stepper-arrow { background: #fff; border-color: #eee; cursor: default; }
+.stepper .stepper-arrow { 
+  cursor: pointer; 
+  display: block; 
+  height: 50%; 
+  position: absolute; 
+  right: 0; 
+  text-indent: -99999px; 
+  width: 40px; 
+  z-index: 50;
+  &:after {
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 6px;
+    margin-left: -6px;
+    top: 50%;
+    margin-top: -6px;
+  }
+  &.up {
+    top: 0;
+    &:after {
+      border-bottom-color: @gray;
+    }
+  }
+  &.down {
+    bottom: 0;
+    &:after {
+      border-top-color: @gray;
+    }
+  }
+}
+
+.stepper.disabled .stepper-input { background: #fff; border-color: #eee; color: #ccc; }
+.stepper.disabled .stepper-arrow { background: #fff; border-color: #eee; cursor: default; }
