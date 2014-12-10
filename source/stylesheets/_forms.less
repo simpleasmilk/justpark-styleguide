@@ -701,7 +701,7 @@ input[type="checkbox"] {
 }
 .radio {
   label:before {  
-    border-radius: 8px;  
+    border-radius: 100%;  
   }
   input[type=radio]:checked + label:before {  
     content:'●';  
@@ -709,7 +709,7 @@ input[type="checkbox"] {
 }
 .checkbox {
   label:before {  
-    border-radius: 3px;  
+    border-radius: @border-radius-base;  
   }
   input[type=checkbox]:checked + label:before {  
     content:'✓'; 
