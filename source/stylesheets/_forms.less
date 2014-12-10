@@ -611,7 +611,12 @@ input[type="checkbox"] {
 
 .stepper { 
   overflow: hidden; 
-  position: relative; 
+  position: relative;
+  &.disabled {
+    .stepper-arrow {
+      cursor: @cursor-disabled;
+    }
+  } 
 }
 .stepper .stepper-input { 
   width: 100%; 
