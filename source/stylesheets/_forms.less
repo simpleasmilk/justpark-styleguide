@@ -140,9 +140,12 @@ output {
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
+    color: #fff;
     cursor: @cursor-disabled;
     background-color: @input-bg-disabled;
     opacity: 1; // iOS fix for unreadable disabled content
+
+    .placeholder(#fff);
   }
 
   // Reset height for `textarea`s
