@@ -5,19 +5,20 @@
 
 .close {
   float: right;
-  font-size: (@font-size-base * 1.5);
+  font-size: @font-size-base;
   font-weight: @close-font-weight;
-  line-height: 1;
+  line-height: @line-height-base;
   color: @close-color;
-  text-shadow: @close-text-shadow;
-  .opacity(.2);
 
   &:hover,
   &:focus {
-    color: @close-color;
+    color: darken(@close-color, 10%);
     text-decoration: none;
     cursor: pointer;
-    .opacity(.5);
+  }
+
+  .icon { 
+    vertical-align: middle;
   }
 
   // Additional properties for button version

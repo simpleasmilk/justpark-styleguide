@@ -1,0 +1,32 @@
+%table.table
+  %thead
+    %tr
+      %th{colspan: '2'} 
+        %h3 Dismissible alerts
+  %tbody
+    %tr
+      %td
+        .alert.alert--success.alert--dismissible{:role => "alert"} 
+          %button.close{"data-dismiss" => "alert", :type => "button"}
+            %span.icon.icon--delete{"aria-hidden" => "true"}
+          %span.sr-only Close
+          Yo, I'm an Alert
+      %td .alert.alert--success.alert--dismissible
+
+    %tr
+      %td
+        .alert.alert--info.alert--dismissible{:role => "alert"} 
+          %button.close{"data-dismiss" => "alert", :type => "button"}
+            %span.icon.icon--delete{"aria-hidden" => "true"}
+          %span.sr-only Close
+          Yo, I'm an Alert
+      %td .alert.alert--info.alert--dismissible
+
+    %tr
+      %td
+        .alert.alert--danger.alert--dismissible{:role => "alert"} 
+          %button.close{"data-dismiss" => "alert", :type => "button"}
+            %span.icon.icon--delete{"aria-hidden" => "true"}
+          %span.sr-only Close
+          Yo, I'm an Alert
+      %td .alert.alert--danger.alert--dismissible

@@ -1,0 +1,20 @@
+%table.table
+  %thead
+    %tr
+      %th 
+        %h3 Alerts with content and actions
+  %tbody
+    %tr
+      %td
+        .alert.alert--success.alert--dismissible{:role => "alert"} 
+          %button.close{"data-dismiss" => "alert", :type => "button"}
+            %span.icon.icon--delete{"aria-hidden" => "true"}
+          %span.sr-only Close
+          
+          %h3.alert__title Yo' I'm an alert title
+          :markdown 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, __ed do eiusmod tempor__ incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          
+          .alert__actions
+            %a.btn.btn--small.btn--primary{href: '#'} Primary
+            %a.btn.btn--small{href: '#'} Other
