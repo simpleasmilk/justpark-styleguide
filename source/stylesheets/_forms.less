@@ -666,3 +666,52 @@ input[type="checkbox"] {
     }
   }
 }
+
+
+
+.radio, .checkbox {
+  input[type=radio], input[type=checkbox] {  
+    display: none;  
+  }
+  label {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;  
+    margin-right: 15px;  
+    vertical-align: middle;
+  } 
+  label:before {  
+    content: "";  
+    display: inline-block;
+    width: 20px;  
+    height: 20px;
+    margin-right: 15px;  
+    position: absolute;  
+    left: 0;
+    border: 1px solid @gray;
+    background-color: white;
+    &:extend(.icon);
+    color: @brand-primary;
+    text-align: center;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    padding: 1px 2.1px;
+  }
+}
+.radio {
+  label:before {  
+    border-radius: 8px;  
+  }
+  input[type=radio]:checked + label:before {  
+    content:'●';  
+  } 
+}
+.checkbox {
+  label:before {  
+    border-radius: 3px;  
+  }
+  input[type=checkbox]:checked + label:before {  
+    content:'✓'; 
+  }    
+}

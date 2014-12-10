@@ -7,36 +7,34 @@
     %tr
       %td
         .checkbox
-          %label
-            %input{:type => "checkbox", :value => ""} Checkbox
+          %input#check1{:name => "check", :type => "checkbox", :value => "check1"}/
+          %label{:for => "check1"} Checkbox No. 1
       %td Input
       %td .form-control
 
     %tr
       %td
         .checkbox
-          %label
-            %input{:disabled => "disabled", :type => "checkbox", :value => ""} Checkbox
+          %input{:disabled => "disabled", :type => "checkbox", :value => ""} 
+          %label Checkbox
       %td Input
       %td .form-control
 
     %tr
       %td
         .radio
-          %label
-            %input#optionsRadios1{:checked => "checked", :name => "optionsRadios", :type => "radio", :value => "option1"}
-            Radio 1
+          %input#male{:name => "gender", :type => "radio", :value => "male"}/
+          %label{:for => "male"} Male
         .radio
-          %label
-            %input#optionsRadios2{:name => "optionsRadios", :type => "radio", :value => "option2"}/
-            Radio 2
+          %input#female{:name => "gender", :type => "radio", :value => "female"}/
+          %label{:for => "female"} Female
       %td Input
       %td .form-control
 
     %tr
       %td
         .radio.disabled
-          %label
-            %input#optionsRadios1{:disabled => "disabled", :type => "radio"}
-            Disabled Radio
+          %input{:disabled => "disabled", :type => "radio" }
+          %label{:for => ""} Disabled
+
 
