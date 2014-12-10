@@ -1,0 +1,42 @@
+%table.table
+  %thead
+    %tr
+      %th{colspan: '3'}
+        %h3 Checkboxes & Radios
+  %tbody
+    %tr
+      %td
+        .checkbox
+          %label
+            %input{:type => "checkbox", :value => ""} Checkbox
+      %td Input
+      %td .form-control
+
+    %tr
+      %td
+        .checkbox
+          %label
+            %input{:disabled => "disabled", :type => "checkbox", :value => ""} Checkbox
+      %td Input
+      %td .form-control
+
+    %tr
+      %td
+        .radio
+          %label
+            %input#optionsRadios1{:checked => "checked", :name => "optionsRadios", :type => "radio", :value => "option1"}
+            Radio 1
+        .radio
+          %label
+            %input#optionsRadios2{:name => "optionsRadios", :type => "radio", :value => "option2"}/
+            Radio 2
+      %td Input
+      %td .form-control
+
+    %tr
+      %td
+        .radio.disabled
+          %label
+            %input#optionsRadios1{:disabled => "disabled", :type => "radio"}
+            Disabled Radio
+
