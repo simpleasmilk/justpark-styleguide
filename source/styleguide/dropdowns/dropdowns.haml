@@ -35,6 +35,25 @@
           %a{:href => "#", :role => "menuitem", :tabindex => "-1"} 
             Separated link
 
+.row
+  .col-md-6
+    %h3 Dropdown with tooltip pointer
+    .dropdown.tooltip.bottom-right.sg-show
+      .tooltip-arrow
+      %ul.dropdown-menu.sg-show{"aria-labelledby" => "dropdownMenu1", :role => "menu"}
+        %li{:role => "presentation"}
+          %a{:href => "#", :role => "menuitem", :tabindex => "-1"} 
+            Action
+        %li{:role => "presentation"}
+          %a{:href => "#", :role => "menuitem", :tabindex => "-1"} 
+            Another action
+        %li{:role => "presentation"}
+          %a{:href => "#", :role => "menuitem", :tabindex => "-1"} 
+            Something else here
+        %li{:role => "presentation"}
+          %a{:href => "#", :role => "menuitem", :tabindex => "-1"} 
+            Separated link
+
 %br
 %br
 %br
