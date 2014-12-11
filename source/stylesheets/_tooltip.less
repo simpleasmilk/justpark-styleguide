@@ -13,7 +13,8 @@
   font-family: @font-family-base;
   font-size: @font-size-small;
   font-weight: normal;
-  line-height: 1.4;
+  max-width: @tooltip-max-width;
+  line-height: @line-height-small;
   .opacity(0);
 
   &.in     { .opacity(@tooltip-opacity); }
@@ -26,12 +27,16 @@
 // Wrapper for the tooltip content
 .tooltip-inner {
   max-width: @tooltip-max-width;
-  padding: 3px 8px;
+  padding: 15px;
   color: @tooltip-color;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   background-color: @tooltip-bg;
   border-radius: @border-radius-base;
+
+  .tooltip--primary & {
+    background-color: @brand-primary;
+  }
 }
 
 // Arrows
@@ -50,6 +55,9 @@
     margin-left: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
     border-top-color: @tooltip-arrow-color;
+    .tooltip--primary& {
+      border-top-color: @brand-primary;
+    }
   }
   &.top-left .tooltip-arrow {
     bottom: 0;
@@ -57,6 +65,9 @@
     margin-bottom: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
     border-top-color: @tooltip-arrow-color;
+    .tooltip--primary& {
+      border-top-color: @brand-primary;
+    }
   }
   &.top-right .tooltip-arrow {
     bottom: 0;
@@ -64,6 +75,9 @@
     margin-bottom: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
     border-top-color: @tooltip-arrow-color;
+    .tooltip--primary& {
+      border-top-color: @brand-primary;
+    }
   }
   &.right .tooltip-arrow {
     top: 50%;
@@ -71,6 +85,9 @@
     margin-top: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
     border-right-color: @tooltip-arrow-color;
+    .tooltip--primary& {
+      border-right-color: @brand-primary;
+    }
   }
   &.left .tooltip-arrow {
     top: 50%;
@@ -78,6 +95,9 @@
     margin-top: -@tooltip-arrow-width;
     border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
     border-left-color: @tooltip-arrow-color;
+    .tooltip--primary& {
+      border-left-color: @brand-primary;
+    }
   }
   &.bottom .tooltip-arrow {
     top: 0;
@@ -85,6 +105,9 @@
     margin-left: -@tooltip-arrow-width;
     border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
     border-bottom-color: @tooltip-arrow-color;
+    .tooltip--primary& {
+      border-bottom-color: @brand-primary;
+    }
   }
   &.bottom-left .tooltip-arrow {
     top: 0;
@@ -92,6 +115,9 @@
     margin-top: -@tooltip-arrow-width;
     border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
     border-bottom-color: @tooltip-arrow-color;
+    .tooltip--primary& {
+      border-bottom-color: @brand-primary;
+    }
   }
   &.bottom-right .tooltip-arrow {
     top: 0;
@@ -99,5 +125,8 @@
     margin-top: -@tooltip-arrow-width;
     border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
     border-bottom-color: @tooltip-arrow-color;
+    .tooltip--primary& {
+      border-bottom-color: @brand-primary;
+    }
   }
 }
