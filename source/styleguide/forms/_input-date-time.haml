@@ -1,14 +1,157 @@
-%table.table
-  %thead
-    %tr
-      %th{colspan: '3'}
-        %h3 Date input
-  %tbody
-    %tr
-      %td
-        .input-with-icon
-          %input.form-control.date.form-control--date-time{placeholder: "I'm an input", type: "text"}
-          .input-icon
-            %span.icon.icon--settings
-      %td Input with icon
-      %td .input-with-icon
+.row
+  .col-md-4
+    %h3 Date input
+    .bootstrap-datetimepicker-widget.bottom.picker-open.sg-show
+      %ul.list-unstyled
+        %li.collapse.in{:style => "height: auto;"}
+          .datepicker
+            .datepicker-days{:style => "display: block;"}
+              %table.table-condensed
+                %thead
+                  %tr
+                    %th.prev
+                      %span.icon.icon--navigateleft{"aria-hidden" => "true"}
+                    %th.picker-switch{:colspan => "5"} December 2014
+                    %th.next
+                      %span.icon.icon--navigateright{"aria-hidden" => "true"}
+                  %tr
+                    %th.dow Su
+                    %th.dow Mo
+                    %th.dow Tu
+                    %th.dow We
+                    %th.dow Th
+                    %th.dow Fr
+                    %th.dow Sa
+                %tbody
+                  %tr
+                    %td.day.old 30
+                    %td.day 1
+                    %td.day 2
+                    %td.day 3
+                    %td.day 4
+                    %td.day 5
+                    %td.day 6
+                  %tr
+                    %td.day 7
+                    %td.day 8
+                    %td.day 9
+                    %td.day 10
+                    %td.day.active.today 11
+                    %td.day 12
+                    %td.day 13
+                  %tr
+                    %td.day 14
+                    %td.day 15
+                    %td.day 16
+                    %td.day 17
+                    %td.day 18
+                    %td.day 19
+                    %td.day 20
+                  %tr
+                    %td.day 21
+                    %td.day 22
+                    %td.day 23
+                    %td.day 24
+                    %td.day 25
+                    %td.day 26
+                    %td.day 27
+                  %tr
+                    %td.day 28
+                    %td.day 29
+                    %td.day 30
+                    %td.day 31
+                    %td.day.new 1
+                    %td.day.new 2
+                    %td.day.new 3
+                  %tr
+                    %td.day.new 4
+                    %td.day.new 5
+                    %td.day.new 6
+                    %td.day.new 7
+                    %td.day.new 8
+                    %td.day.new 9
+                    %td.day.new 10
+            .datepicker-months{:style => "display: none;"}
+              %table.table-condensed
+                %thead
+                  %tr
+                    %th.prev ‹
+                    %th.picker-switch{:colspan => "5"} 2014
+                    %th.next ›
+                %tbody
+                  %tr
+                    %td{:colspan => "7"}
+                      %span.month Jan
+                      %span.month Feb
+                      %span.month Mar
+                      %span.month Apr
+                      %span.month May
+                      %span.month Jun
+                      %span.month Jul
+                      %span.month Aug
+                      %span.month Sep
+                      %span.month Oct
+                      %span.month Nov
+                      %span.month.active Dec
+            .datepicker-years{:style => "display: none;"}
+              %table.table-condensed
+                %thead
+                  %tr
+                    %th.prev ‹
+                    %th.picker-switch{:colspan => "5"} 2010-2019
+                    %th.next ›
+                %tbody
+                  %tr
+                    %td{:colspan => "7"}
+                      %span.year.old 2009
+                      %span.year 2010
+                      %span.year 2011
+                      %span.year 2012
+                      %span.year 2013
+                      %span.year.active 2014
+                      %span.year 2015
+                      %span.year 2016
+                      %span.year 2017
+                      %span.year 2018
+                      %span.year 2019
+                      %span.year.old 2020
+
+
+
+  .col-md-4
+    %h3 Time and Date input
+    .bootstrap-datetimepicker-widget.bootstrap-datetimepicker-widget--time.picker-open.sg-show
+      %ul.list-unstyled
+        %li
+          .timepicker
+            .timepicker-picker.clearfix
+              .timepicker__date 9th December 2014 
+              
+              .timepicker__hour.clearfix
+                %a{"data-action" => "incrementHours", :href => "#"}
+                  %span.icon.icon--navigateup
+
+                %input.form-control{type: "text", "data-time-component" => "hours", value: "9"}
+
+                %a{"data-action" => "decrementHours", :href => "#"}
+                  %span.icon.icon--navigatedown
+                    
+              .timepicker__minute  
+                %a{"data-action" => "incrementMinutes", :href => "#"}
+                  %span.icon.icon--navigateup
+                
+                %input.form-control{type: "text", "data-time-component" => "minutes", value: "30"}
+
+
+                %a{"data-action" => "decrementMinutes", :href => "#"}
+                  %span.icon.icon--navigatedown
+              
+              .timepicker__ampm.clearfix
+                %button.btn.btn--full{"data-action" => "togglePeriod", :type => "button"} AM
+
+            %a.btn.btn--primary.btn--full{:href => "#"} Done
+              
+              
+              
+              
+            
