@@ -24,6 +24,14 @@
   &.left   { margin-left: -3px; padding: 0 @tooltip-arrow-width; }
 }
 
+.tooltip--small {
+  width: 180px;
+  font-size: @font-size-small*0.95;
+  .tooltip-inner {
+    padding: 5px 10px;
+  }
+}
+
 // Wrapper for the tooltip content
 .tooltip-inner {
   max-width: @tooltip-max-width;

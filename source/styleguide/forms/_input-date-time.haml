@@ -14,50 +14,68 @@
                     %th.picker-switch{:colspan => "5"} December 2014
                     %th.next
                       %span.icon.icon--navigateright{"aria-hidden" => "true"}
-                  %tr
-                    %th.dow Su
-                    %th.dow Mo
-                    %th.dow Tu
-                    %th.dow We
-                    %th.dow Th
-                    %th.dow Fr
-                    %th.dow Sa
+                  %tr.datepicker__days
+                    %th.dow Sun
+                    %th.dow Mon
+                    %th.dow Tue
+                    %th.dow Wed
+                    %th.dow Thu
+                    %th.dow Fri
+                    %th.dow Sat
                 %tbody
                   %tr
                     %td.day.old 30
-                    %td.day 1
-                    %td.day 2
-                    %td.day 3
-                    %td.day 4
-                    %td.day 5
+                    %td.day.partial-book
+                      1
+                      %a{:href => "#"}
+                    %td.day.disabled 2
+                    %td.day.disabled 3
+                    %td.day.disabled 4
+                    %td.day.partial-book 
+                      5
+                      %a{:href => "#"}
+                        .tooltip.tooltip--small.bottom-left.sg-show{:role => "tooltip"}
+                          .tooltip-arrow
+                          .tooltip-inner
+                            Booked 9:30am - 5:30pm
+                            %br
+                            Booked 6pm - 9pm
                     %td.day 6
                   %tr
                     %td.day 7
-                    %td.day 8
+                    %td.day.today 8
                     %td.day 9
                     %td.day 10
-                    %td.day.active.today 11
-                    %td.day 12
+                    %td.day.active 11
+                    %td.day.active 12
                     %td.day 13
                   %tr
                     %td.day 14
                     %td.day 15
-                    %td.day 16
-                    %td.day 17
-                    %td.day 18
+                    %td.day.active 16
+                    %td.day.disabled 17
+                    %td.day.disabled 18
                     %td.day 19
-                    %td.day 20
+                    %td.day.partial-book 
+                      20
+                      %a{:href => "#"}
+                        .tooltip.tooltip--small.bottom-left.sg-show{:role => "tooltip"}
+                          .tooltip-arrow
+                          .tooltip-inner
+                            Booked 9:30am - 5:30pm
                   %tr
-                    %td.day 21
-                    %td.day 22
+                    %td.day.partial-book
+                      21
+                      %a{:href => "#"}
+                    %td.day.disabled 22
                     %td.day 23
                     %td.day 24
-                    %td.day 25
+                    %td.day.active 25
                     %td.day 26
                     %td.day 27
                   %tr
                     %td.day 28
-                    %td.day 29
+                    %td.day.disabled 29
                     %td.day 30
                     %td.day 31
                     %td.day.new 1

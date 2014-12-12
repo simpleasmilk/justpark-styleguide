@@ -69,6 +69,8 @@
 .bootstrap-datetimepicker-widget td,
 .bootstrap-datetimepicker-widget th {
   text-align: center;
+  font-size: @font-size-base*0.85;
+  position: relative;
 }
 .bootstrap-datetimepicker-widget td {
   height: 54px;
@@ -95,33 +97,42 @@
 }
 .bootstrap-datetimepicker-widget td.old,
 .bootstrap-datetimepicker-widget td.new {
-  color: #777777;
+  color: @gray;
 }
 .bootstrap-datetimepicker-widget td.today {
   position: relative;
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-top: 7px solid @gray;
+    border-bottom-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &.active:before {
+    border-top: 7px solid darken(@brand-primary, 15%); // Changes colour for adtive day
+  }
 }
-.bootstrap-datetimepicker-widget td.today:before {
-  content: '';
-  display: inline-block;
-  border-left: 7px solid transparent;
-  border-bottom: 7px solid #428bca;
-  border-top-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
-}
-.bootstrap-datetimepicker-widget td.active,
-.bootstrap-datetimepicker-widget td.active:hover {
+.bootstrap-datetimepicker-widget td.active {
   background-color: @brand-primary;
   color: #ffffff;
+  transform: scale(1.05);
+  border-left: 0;
+  &:hover {
+    background-color: darken(@brand-primary, 5%);
+    color: #ffffff;
+  }
 }
+
 .bootstrap-datetimepicker-widget td.active.today:before {
   border-bottom-color: #fff;
 }
 .bootstrap-datetimepicker-widget td.disabled,
 .bootstrap-datetimepicker-widget td.disabled:hover {
-  background: none;
-  color: #777777;
+  background-color: @gray-light;
+  color: #ffffff;
   cursor: not-allowed;
 }
 .bootstrap-datetimepicker-widget td span {
@@ -219,6 +230,38 @@
       border: 0;
       padding-bottom: 10px;
     }
+  }
+}
+
+.bootstrap-datetimepicker-widget td.partial-book {
+  a {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background-color: @brand-primary;
+    .tooltip {
+      position: absolute;
+      top: 0;
+      margin-top: 13px;
+      right: 0;
+      margin-right: -6px;
+      display: none;
+    }
+  }
+  &:hover a .tooltip {
+    display: block;
+  }
+}
+
+.datepicker__days {
+  .dow {
+    font-size: @font-size-base*0.7;
   }
 }
 
