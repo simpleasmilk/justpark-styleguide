@@ -17,6 +17,9 @@
 .bootstrap-datetimepicker-widget--time {
   width: 220px;
 }
+.bootstrap-datetimepicker-widget--date-time {
+  width: 340px;
+}
 
 .bootstrap-datetimepicker-widget.timepicker-sbs {
   width: 600px;
@@ -305,7 +308,8 @@
     line-height: 36px;
   }
 
-  .timepicker__ampm {
+  .timepicker__ampm,
+  .timepicker__btn {
     width: 24%;
     float: left;
     padding: 30px 0;
@@ -316,6 +320,24 @@
   }
 }
 
+
 .timepicker-picker {
   padding-bottom: 5px;
+}
+
+.timepicker--inline {
+  padding: 10px 7px 0;
+  border-top: 1px solid @gray;
+
+  .timepicker__hour,
+  .timepicker__minute {
+    width: 20%;
+  }
+  .timepicker__ampm {
+    width: 15%;
+    margin-right: 5%;
+  }
+  .timepicker__btn {
+    width: 30%;
+  }
 }
