@@ -1,0 +1,79 @@
+.marker {
+	display: inline-block;
+	padding: @marker-padding-vertical @marker-padding-horizontal;
+	border-radius: @marker-border-radius;
+	position: relative;
+	font-size: @marker-font-size;
+	font-weight: @marker-font-weight;
+	width: @marker-default-width;
+	text-align: center;
+	cursor: pointer;
+	.marker-variant(@marker-default-background);
+}
+.marker__currency {
+	font-size: @font-size-base*0.9;
+	line-height: @line-height-base*1.3;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+.marker--primary {
+	.marker-variant(@brand-primary);
+}
+.marker--secondary {
+	.marker-variant(@brand-secondary);
+}
+
+.markers-stacked {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: @marker-default-width;
+	.marker {
+		border-radius: 0;
+		&:after {
+			display: none;
+		}
+	}
+	.marker:first-child {
+		border-top-left-radius: @marker-border-radius;
+		border-top-right-radius: @marker-border-radius;
+	}
+	.marker:last-child {
+		border-bottom-left-radius: @marker-border-radius;
+		border-bottom-right-radius: @marker-border-radius;
+		&:after {
+			display: block;
+		}
+	}
+}
+
+.markers-grouped {
+	width: 100px;
+	height: 100px;
+	padding: 7px;
+	border-radius: 100%;
+	background: #ccc;
+	position: relative;
+
+	.markers-grouped__inner {
+		.marker-variant(@marker-default-background);
+		width: 86px;
+		height: 86px;
+		border-radius: 100%;
+		text-align: center;
+		font-size: @marker-font-size;
+		font-weight: @marker-font-weight;
+		padding: 31px 0;
+		&:after {
+			display: none;
+		}
+	}
+	.v-align {
+		width: 100%;
+		position: absolute;
+		height: 0;
+		line-height: 0;
+		margin-top: 50%;
+	}
+}

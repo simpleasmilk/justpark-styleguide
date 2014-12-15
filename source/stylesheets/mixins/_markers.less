@@ -1,0 +1,33 @@
+// Markers
+
+.marker-variant(@background) {
+  background-color: @background;
+  color: #fff;
+  &:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-width: 15px;
+    margin-left: -15px;
+    border-top-color: @background;
+  }
+  &:hover {
+    background-color: darken(@background, 5%);
+    &:after {
+      border-top-color: darken(@background, 5%);
+    }
+  }
+
+  .markers--stacked & {
+    border-bottom: 1px solid lighten(@background, 20%);
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
