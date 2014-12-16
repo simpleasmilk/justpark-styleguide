@@ -1,0 +1,36 @@
+%table.table
+  %thead
+    %tr
+      %th{colspan: '3'}
+  %tbody
+    %tr
+      %td
+        .tag{href: '#'}
+          Tag
+          %a.tag__icon.tag__icon--right.icon--delete{:href => "#", "aria-hidden" => "true"}
+      %td Tag
+      %td .tag
+
+    %tr
+      %td
+        .tag.tag--primary{href: '#'}
+          Tag
+          %a.tag__icon.tag__icon--right.icon--delete{:href => "#", "aria-hidden" => "true"}
+      %td Primary tag
+      %td .tag.tag--primary
+
+    %tr
+      %td
+        .tag.tag--secondary{href: '#'}
+          Tag
+          %a.tag__icon.tag__icon--right.icon--delete{:href => "#", "aria-hidden" => "true"}
+      %td Secondary tag
+      %td .tag.tag--secondary
+
+    %tr
+      %td
+        .tag.tag--negative{href: '#'}
+          Tag
+          %a.tag__icon.tag__icon--right.icon--delete{:href => "#", "aria-hidden" => "true"}
+      %td Negative tag
+      %td .tag.tag--negative

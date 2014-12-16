@@ -1,0 +1,54 @@
+.tag {
+	&:extend(.btn all);
+	&:hover {
+		background: @btn-default-bg;
+	}
+}
+
+.tag--primary {
+	&:extend(.btn--primary all);
+	&:hover {
+		background: @btn-primary-bg;
+	}
+	.tag__icon {
+		color: #fff;
+		&:hover {
+			color: darken(#fff, 10%);
+		}
+	}
+}
+.tag--secondary {
+	&:extend(.btn--secondary all);
+	&:hover {
+		background: @btn-secondary-bg;
+	}
+	.tag__icon {
+		color: #fff;
+		&:hover {
+			color: darken(#fff, 10%);
+		}
+	}
+}
+.tag--negative {
+	&:extend(.btn--negative all);
+	&:hover {
+		background: @btn-danger-bg;
+	}
+	.tag__icon {
+		color: #fff;
+		&:hover {
+			color: darken(#fff, 10%);
+		}
+	}
+}
+
+.tag__icon {
+	&:extend(.btn__icon all);
+	color: @gray-dark;
+	&:hover {
+		color: lighten(@gray-dark, 10%);
+	}
+}
+.tag__icon--right {
+	&:extend(.btn__icon--right all);
+}
