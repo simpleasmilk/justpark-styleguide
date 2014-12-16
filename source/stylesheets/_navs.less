@@ -2,7 +2,6 @@
 // Navs
 // --------------------------------------------------
 
-
 // Base class
 // --------------------------------------------------
 
@@ -20,6 +19,7 @@
       position: relative;
       display: block;
       padding: @nav-link-padding;
+      color: @gray-dark;
       &:hover,
       &:focus {
         text-decoration: none;
@@ -65,6 +65,12 @@
   // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
   > li > a > img {
     max-width: none;
+  }
+}
+
+.nav--inline {
+  li {
+    float: left;
   }
 }
 
@@ -140,13 +146,46 @@
 
 
 // Stacked pills
-.nav-stacked {
+.nav-stacked,
+.nav--stacked {
+  border: 1px solid @gray;
+  background: white;
+  border-radius: @border-radius-base;
   > li {
     float: none;
-    + li {
-      margin-top: 2px;
-      margin-left: 0; // no need for this gap between nav items
+    border-top: 1px solid @gray;
+    &:first-child {
+      border-top: 0;
+      border-top-left-radius: @border-radius-base;
+      border-top-right-radius: @border-radius-base;
     }
+    &:last-child {
+      border-bottom-left-radius: @border-radius-base;
+      border-bottom-right-radius: @border-radius-base;
+    }
+  }
+  .active {
+    background-color: @gray-light;
+  }
+}
+
+.nav--bar {
+  display: inline-block;
+  &:extend(.nav--stacked);
+  > li {
+    border-left: 1px solid @gray;
+    &:first-child {
+      border-left: 0;
+      border-top-left-radius: @border-radius-base;
+      border-bottom-left-radius: @border-radius-base;
+    }
+    &:last-child {
+      border-top-right-radius: @border-radius-base;
+      border-bottom-right-radius: @border-radius-base;
+    }
+  }
+  .active {
+    background-color: @gray-light;
   }
 }
 

@@ -66,3 +66,20 @@ title: JustPark Styleguide
 .container
   %h2 Wells
   = partial "styleguide/wells"
+
+.container
+  %h2 Navigation
+  .row
+    .col-md-3
+      = partial "styleguide/navigation/nav-stacked"
+    .col-md-9
+      .row.margin-bottom--20
+        .col-md-4
+          = partial "styleguide/buttons/button-group"
+        .col-md-4
+          = partial "styleguide/navigation/nav-pagination"
+        .col-md-4
+          = partial "styleguide/navigation/nav-breadcrumbs"
+      .row
+        .col-md-12
+          = partial "styleguide/navigation/nav-bar"

@@ -2,17 +2,17 @@
 //
 //##
 
-@pagination-color:                     @link-color;
+@pagination-color:                     @gray-dark;
 @pagination-bg:                        #fff;
-@pagination-border:                    #ddd;
+@pagination-border:                    @gray;
 
-@pagination-hover-color:               @link-hover-color;
-@pagination-hover-bg:                  @gray-lighter;
-@pagination-hover-border:              #ddd;
+@pagination-hover-color:               lighten(@pagination-color, 10%);
+@pagination-hover-bg:                  @pagination-bg;
+@pagination-hover-border:              @pagination-border;
 
-@pagination-active-color:              #fff;
-@pagination-active-bg:                 @brand-primary;
-@pagination-active-border:             @brand-primary;
+@pagination-active-color:              @gray;
+@pagination-active-bg:                 @gray;
+@pagination-active-border:             @pagination-border;
 
 @pagination-disabled-color:            @gray-light;
 @pagination-disabled-bg:               #fff;

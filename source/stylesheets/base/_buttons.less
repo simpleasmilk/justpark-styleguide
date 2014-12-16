@@ -16,6 +16,7 @@
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 0;
+  text-decoration: none;
   white-space: nowrap;
   .button-size(@btn-padding-vertical; @btn-padding-horizontal; @font-size-base; @line-height-base; @border-radius-base);
   .user-select(none);
@@ -104,7 +105,7 @@
   &:hover,
   &:focus {
     color: @link-hover-color;
-    text-decoration: underline;
+    text-decoration: none;
     background-color: transparent;
   }
   &[disabled],
@@ -179,4 +180,11 @@ input[type="button"] {
   &:hover {
     text-decoration: none;
   }
+}
+
+
+// Button Fixed widths
+// --------------------------------------------------
+.btn--width-120 {
+  width: 120px;
 }
