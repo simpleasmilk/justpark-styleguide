@@ -35,6 +35,25 @@
   }
   &.in .modal-dialog { .translate(0, 0) }
 }
+
+.modal--carousel {
+  .modal-content {
+    border-radius: 10px;
+  }
+  .modal-body, .modal-header {
+    padding: 0;
+  }
+  .modal-header {
+    width: 100%;
+    position: absolute;
+    z-index: 90;
+    padding: 20px 20px 0 0;
+  }
+  .modal-header .close .icon {
+    color: @gray-dark;
+  }
+}
+
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;

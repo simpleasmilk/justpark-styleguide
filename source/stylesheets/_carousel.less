@@ -12,11 +12,15 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  border-radius: @border-radius-base;
 
   > .item {
     display: none;
     position: relative;
     .transition(.6s ease-in-out left);
+    border-radius: @border-radius-base;
+    overflow: hidden;
+
 
     // Account for jankitude on images
     > img,
@@ -96,7 +100,6 @@
   left: 0;
   bottom: 0;
   width: @carousel-control-width;
-  .opacity(@carousel-control-opacity);
   font-size: @carousel-control-font-size;
   color: @carousel-control-color;
   text-align: center;
@@ -106,12 +109,14 @@
 
   // Set gradients for backgrounds
   &.left {
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+    border-bottom-left-radius: @border-radius-base;
+    border-top-left-radius: @border-radius-base;
   }
   &.right {
     left: auto;
     right: 0;
-    #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+    border-bottom-left-radius: @border-radius-base;
+    border-top-left-radius: @border-radius-base;
   }
 
   // Hover/focus state
@@ -120,48 +125,28 @@
     outline: 0;
     color: @carousel-control-color;
     text-decoration: none;
-    .opacity(.9);
   }
 
   // Toggles
-  .icon-prev,
-  .icon-next,
-  .glyphicon-chevron-left,
-  .glyphicon-chevron-right {
+  .icon {
     position: absolute;
     top: 50%;
     z-index: 5;
     display: inline-block;
   }
-  .icon-prev,
-  .glyphicon-chevron-left {
+  .icon--navigateleft {
     left: 50%;
-    margin-left: -10px;
+    margin-left: -24px;
   }
-  .icon-next,
-  .glyphicon-chevron-right {
+  .icon--navigateright {
     right: 50%;
-    margin-right: -10px;
+    margin-right: -24px;
   }
-  .icon-prev,
-  .icon-next {
-    width:  20px;
-    height: 20px;
-    margin-top: -10px;
+  .icon {
+    width:  48px;
+    height: 48px;
+    margin-top: -24px;
     line-height: 1;
-    font-family: serif;
-  }
-
-
-  .icon-prev {
-    &:before {
-      content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
-    }
-  }
-  .icon-next {
-    &:before {
-      content: '\203a';// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
-    }
   }
 }
 
@@ -215,15 +200,16 @@
 // Hidden by default for smaller viewports
 .carousel-caption {
   position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   color: @carousel-caption-color;
-  text-align: center;
+  text-align: left;
   text-shadow: @carousel-text-shadow;
+  background: rgba(0,0,0,0.4);
+  width: 100%;
   & .btn {
     text-shadow: none; // No shadow for button elements in carousel-caption
   }
@@ -252,13 +238,6 @@
     .icon-next {
       margin-right: -15px;
     }
-  }
-
-  // Show and left align the captions
-  .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
   }
 
   // Move up the indicators

@@ -1,0 +1,11 @@
+.container.container--dark
+  %h4.margin-bottom--20 Image slider as a modal
+  .modal.modal--carousel.sg-show
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"data-dismiss" => "modal", :type => "button"}
+            %span.icon.icon--delete{"aria-hidden" => "true"}
+            %span.sr-only Close
+        .modal-body
+          = partial "styleguide/carousel"
