@@ -96,30 +96,30 @@
       %ul.list-unstyled
         %li
           .timepicker
+            .timepicker__date 9th December 2014 
             .timepicker-picker.clearfix
-              .timepicker__date 9th December 2014 
               
               .timepicker__hour.clearfix
                 %a{"data-action" => "incrementHours", :href => "#"}
-                  %span.icon.icon--navigateup
+                  %span.arrow-up
 
-                %input.form-control{type: "text", "data-time-component" => "hours", value: "9"}
+                %input.form-control.form-control--large{type: "text", "data-time-component" => "hours", value: "9"}
 
                 %a{"data-action" => "decrementHours", :href => "#"}
-                  %span.icon.icon--navigatedown
+                  %span.arrow-down
                     
               .timepicker__minute  
                 %a{"data-action" => "incrementMinutes", :href => "#"}
-                  %span.icon.icon--navigateup
+                  %span.arrow-up
                 
-                %input.form-control{type: "text", "data-time-component" => "minutes", value: "30"}
+                %input.form-control.form-control--large{type: "text", "data-time-component" => "minutes", value: "30"}
 
 
                 %a{"data-action" => "decrementMinutes", :href => "#"}
-                  %span.icon.icon--navigatedown
+                  %span.arrow-down
               
               .timepicker__ampm.clearfix
-                %button.btn.btn--full{"data-action" => "togglePeriod", :type => "button"} AM
+                %button.btn.btn--large.btn--full{"data-action" => "togglePeriod", :type => "button"} AM
 
             %a.btn.btn--primary.btn--full{:href => "#"} Done
              
@@ -202,22 +202,22 @@
 
               .timepicker__hour.clearfix
                 %a{"data-action" => "incrementHours", :href => "#"}
-                  %span.icon.icon--navigateup
+                  %span.arrow-up
 
                 %input.form-control{type: "text", "data-time-component" => "hours", value: "9"}
 
                 %a{"data-action" => "decrementHours", :href => "#"}
-                  %span.icon.icon--navigatedown
+                  %span.arrow-down
                     
               .timepicker__minute  
                 %a{"data-action" => "incrementMinutes", :href => "#"}
-                  %span.icon.icon--navigateup
+                  %span.arrow-up
                 
                 %input.form-control{type: "text", "data-time-component" => "minutes", value: "30"}
 
 
                 %a{"data-action" => "decrementMinutes", :href => "#"}
-                  %span.icon.icon--navigatedown
+                  %span.arrow-down
               
               .timepicker__ampm.clearfix
                 %button.btn.btn--full{"data-action" => "togglePeriod", :type => "button"} AM

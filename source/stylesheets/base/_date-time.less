@@ -15,7 +15,7 @@
   border: 1px solid @gray;
 }
 .bootstrap-datetimepicker-widget--time {
-  width: 220px;
+  width: 200px;
 }
 .bootstrap-datetimepicker-widget--date-time {
   width: 340px;
@@ -275,6 +275,14 @@
 .timepicker {
   padding: 12px 15px;
 
+  .timepicker-picker {
+    padding: 20px 0 25px;
+    .arrow-up, .arrow-down {
+      height: 10px;
+      display: block;
+    }
+  }
+
   .timepicker__date {
     text-align: center;
     font-weight: bold;
@@ -294,7 +302,7 @@
       color: @gray;
     }
     .form-control {
-      margin-bottom: 3px;
+      margin-bottom: 0;
     }
     a:hover {
       text-decoration: none;
@@ -312,7 +320,7 @@
   .timepicker__btn {
     width: 24%;
     float: left;
-    padding: 30px 0;
+    padding: 10px 0;
     .btn {
       padding-left: 2px;
       padding-right: 2px;
@@ -326,7 +334,7 @@
 }
 
 .timepicker--inline {
-  padding: 10px 7px 0;
+  padding: 5px 7px 0;
   border-top: 1px solid @gray;
 
   .timepicker__hour,
