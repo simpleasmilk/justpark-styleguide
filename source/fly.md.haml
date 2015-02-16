@@ -1,0 +1,97 @@
+---
+title: Park & Fly with JustPark
+---
+
+%section.hero
+  .overlay.overlay--light.hero__overlay
+    .vcenter
+      .vcenter__content
+
+        .container
+          .search-box
+            .row.text-center
+              %img.logo.hero__logo{:src => "/images/logo.png", :width => "140px"}
+              .col-md-12.text-left
+                %p 
+                  Use JustPark to help you find a secure long term parking space for airport travel, we provide long term parking, shuttle bus and car collection & drop off to make your airport parking as simple as possible.
+                  %a{:href => "#more"} Learn more
+
+            .row
+              .col-md-12
+                %select.form-control.form-control--select
+                  %option{:selected => "selected", :value => ""} Which airport are you flying from?
+                  %option London Gatwick
+                  %option London Heathrow
+                  %option Another airport
+                  %option Another airport
+
+            .row
+              .col-md-6
+                .input-with-icon
+                  %input.form-control{placeholder: "Departing date", type: "text"}
+                  .input-icon
+                    %span.icon.icon--calendar
+              
+                .input-with-icon
+                  %input.form-control{placeholder: "Departing time", type: "text"}
+                  .input-icon
+                    %span.icon.icon--clock
+
+              .col-md-6
+                .input-with-icon
+                  %input.form-control{placeholder: "Returning date", type: "text"}
+                  .input-icon
+                    %span.icon.icon--calendar
+
+                .input-with-icon
+                  %input.form-control{placeholder: "Returning time", type: "text"}
+                  .input-icon
+                    %span.icon.icon--clock
+
+            .row.text-center
+              %button.btn.btn--primary.btn--large
+                Find me a parking space 
+
+
+%section.section#more
+  .container.container--small
+    .row
+      .col-md-7
+        %h2 JustPark provides convinient long term airport parking.
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        %p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        %button.btn.btn--secondary
+          Find me a parking space 
+      .col-md-5
+        %img.full-width{:src => "http://placehold.it/350x200"}
+
+%section.section
+  .container.container--small
+    .row
+      .col-md-12.text-center
+        %h2 How it works
+    .row.text-center
+      .col-md-4
+        %img.rounded{:src => "http://placehold.it/120x120", width: '120px'}
+        %h3 Book online
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      .col-md-4
+        %img.rounded{:src => "http://placehold.it/120x120", width: '120px'}
+        %h3 Book online
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      .col-md-4
+        %img.rounded{:src => "http://placehold.it/120x120", width: '120px'}
+        %h3 Book online
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+
+%section.section#more
+  .container.container--small
+    .row
+      .col-md-5
+        %img.full-width{:src => "http://placehold.it/350x200"}
+      .col-md-7
+        %h2 Hassle free car pickup & collection
+        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        %p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        %button.btn.btn--secondary
+          Find me a parking space 
