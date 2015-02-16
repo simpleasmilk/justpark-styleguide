@@ -9008,6 +9008,9 @@ body {
   background-position: center top;
   background-image: url(/images/hero.jpg);
 }
+.container--search {
+  padding-right: 560px;
+}
 .hero__logo {
   margin-bottom: 15px;
 }
@@ -9027,6 +9030,10 @@ body {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #f1f1f1;
+}
+.hero__search {
+  z-index: 999;
+  width: 560px;
 }
 .full-width {
   width: 100%;
